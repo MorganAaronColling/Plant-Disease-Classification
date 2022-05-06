@@ -1,3 +1,5 @@
+MODEL SUMMARY
+
 Model: "sequential"
 _________________________________________________________________
  Layer (type)                Output Shape              Param #
@@ -21,15 +23,23 @@ Trainable params: 15,540,902
 Non-trainable params: 8,581,120
 _________________________________________________________________
 
+DATASET BREAKDOWN
 
 Found 49408 images belonging to 38 classes.
 Found 2727 images belonging to 38 classes.
 Found 2781 images belonging to 38 classes.
+
+MODEL BATCH SHAPE
+
 Batch shape=(32, 224, 224, 3), min=0.000, max=255.000
+
+MODEL STEPS
+
 Epoch Steps = 1544
 Val Steps = 85
 
-MASTER MODEL:
+MODEL TESTING
+
 - test acc = 97.8425
 - loss: 0.0684 - sparse_categorical_accuracy: 0.9774 - val_loss: 0.0811 - val_sparse_categorical_accuracy: 0.9794
 - NUM_OUTPUT_CLASSES = 38
