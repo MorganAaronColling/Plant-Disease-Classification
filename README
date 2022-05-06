@@ -1,0 +1,84 @@
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ resnet50 (Functional)       (None, 7, 7, 2048)        23587712
+
+ average_pooling2d (AverageP  (None, 1, 1, 2048)       0
+ ooling2D)
+
+ flatten (Flatten)           (None, 2048)              0
+
+ dense (Dense)               (None, 256)               524544
+
+ dropout (Dropout)           (None, 256)               0
+
+ dense_1 (Dense)             (None, 38)                9766
+
+=================================================================
+Total params: 24,122,022
+Trainable params: 15,540,902
+Non-trainable params: 8,581,120
+_________________________________________________________________
+
+
+Found 49408 images belonging to 38 classes.
+Found 2727 images belonging to 38 classes.
+Found 2781 images belonging to 38 classes.
+Batch shape=(32, 224, 224, 3), min=0.000, max=255.000
+Epoch Steps = 1544
+Val Steps = 85
+
+MASTER MODEL:
+- test acc = 97.8425
+- loss: 0.0684 - sparse_categorical_accuracy: 0.9774 - val_loss: 0.0811 - val_sparse_categorical_accuracy: 0.9794
+- NUM_OUTPUT_CLASSES = 38
+- BATCH_SIZE = 32
+- EPOCHS = 10
+- LEARNING_RATE = 1e-2
+- SPLIT_RATIO = (0.9, 0.05, 0.05)
+
+                               precision    recall  f1-score   support
+
+              APPLE_BLACK_ROT       1.00      1.00      1.00        50
+             APPLE_CEDAR_RUST       1.00      0.98      0.99        55
+                APPLE_HEALTHY       0.99      0.99      0.99        88
+                   APPLE_SCAB       0.98      0.98      0.98        55
+                   BACKGROUND       0.98      1.00      0.99        58
+    BELLPEPPER_BACTERIAL_SPOT       0.95      0.96      0.95        55
+           BELLPEPPER_HEALTHY       0.97      0.97      0.97        78
+               CHERRY_HEALTHY       0.98      0.96      0.97        54
+        CHERRY_POWDERY_MILDEW       1.00      1.00      1.00        54
+            CITRUS_BLACK_SPOT       0.86      0.60      0.71        10
+                CITRUS_CANKER       0.81      1.00      0.90        13
+              CITRUS_GREENING       0.99      0.99      0.99       287
+               CITRUS_HEALTHY       0.75      0.75      0.75         4
+             CORN_COMMON_RUST       1.00      0.98      0.99        66
+          CORN_GREY_LEAF_SPOT       0.91      0.94      0.93        54
+                 CORN_HEALTHY       1.00      1.00      1.00        59
+    CORN_NORTHERN_LEAF_BLIGHT       0.92      0.92      0.92        61
+          GRAPE_BLACK_MEASLES       1.00      1.00      1.00        70
+              GRAPE_BLACK_ROT       0.98      1.00      0.99        63
+                GRAPE_HEALTHY       1.00      1.00      1.00        54
+   GRAPE_ISARIOPSIS_LEAF_SPOT       1.00      1.00      1.00        55
+         PEACH_BACTERIAL_SPOT       1.00      1.00      1.00       116
+                PEACH_HEALTHY       0.95      0.96      0.96        57
+          POTATO_EARLY_BLIGHT       0.98      0.93      0.95        57
+               POTATO_HEALTHY       1.00      1.00      1.00        50
+           POTATO_LATE_BLIGHT       1.00      1.00      1.00        51
+           STRAWBERRY_HEALTHY       0.98      0.98      0.98        56
+       STRAWBERRY_LEAF_SCORCH       1.00      1.00      1.00        56
+        TOMATO_BACTERIAL_SPOT       0.96      0.95      0.96       113
+          TOMATO_EARLY_BLIGHT       0.96      0.95      0.95        55
+               TOMATO_HEALTHY       0.94      0.96      0.95        84
+           TOMATO_LATE_BLIGHT       0.95      0.98      0.97       107
+             TOMATO_LEAF_MOLD       0.93      0.96      0.95        56
+          TOMATO_MOSAIC_VIRUS       1.00      0.94      0.97        54
+    TOMATO_SEPTORIA_LEAF_SPOT       0.97      0.97      0.97        97
+          TOMATO_SPIDER_MITES       1.00      1.00      1.00        85
+          TOMATO_TARGET_SPOTS       1.00      0.97      0.99        71
+TOMATO_YELLOW_LEAF_CURL_VIRUS       0.99      0.99      0.99       273
+
+                     accuracy                           0.98      2781
+                    macro avg       0.97      0.96      0.96      2781
+                 weighted avg       0.98      0.98      0.98      2781
