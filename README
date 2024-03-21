@@ -1,3 +1,13 @@
+Plant Disease Classification
+
+Early identification of plant diseases is very important as plant diseases affect the growth of their
+respective species. Advancementsin machine learning deep learning, has shown great potential in
+terms of increased accuracy of classification when compared to conventional machine learning
+approaches [58]. Traditional classification methods, such as laboratory testing of plant specimens
+and naked-eye observation have many limitations, for example, being time consuming and
+subjective.Deep learningmethods based on convolutional neural networks (CNNs)solve or partially
+solve the problems of traditional classification methods[59].
+
 MODEL SUMMARY
 
 Model: "sequential"
